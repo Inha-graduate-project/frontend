@@ -10,6 +10,8 @@ export const Block = styled(Layout)`
     gap: 40px;
 `;
 export const ContentBox = styled.div`
+    min-width: 40vw;
+    max-width: 40vw;
     border: 1px solid #ebebeb;
     border-radius: 8px;
     padding: 60px;
@@ -20,7 +22,7 @@ export const ContentBox = styled.div`
     gap: 60px;
 `;
 export const NextButton = styled(Button)`
-    width: 300px;
+    width: 10vw;
     padding: 30px 0;
     font-size: 20px;
     font-weight: bold;

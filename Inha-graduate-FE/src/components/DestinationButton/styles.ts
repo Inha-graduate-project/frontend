@@ -3,6 +3,6 @@ import styled from 'styled-components';
 export const Block = styled.div`
     display: flex;
     flex-wrap: wrap;
-    max-width: 600px;
+    justify-content: center;
     gap: 10px;
 `;
