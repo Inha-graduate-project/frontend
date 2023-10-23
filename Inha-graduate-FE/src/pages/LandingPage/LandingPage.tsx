@@ -1,6 +1,9 @@
-import { DestinationPicker, StepsComponent } from "../../components";
+import {
+  DestinationPicker,
+  StepsComponent,
+  SchedulePicker,
+} from "../../components";
 import { Block, ContentBox, NextButton } from "./styles";
-import { ArrowRightOutlined } from "@ant-design/icons";
 import { useState } from "react";
 
 export default function LandingPage() {
@@ -11,8 +14,14 @@ export default function LandingPage() {
         <StepsComponent />
         <ContentBox>
           {page === 0 && <DestinationPicker />}
-          <NextButton type="primary">
-            다음 <ArrowRightOutlined />
+          {page === 1 && <SchedulePicker />}
+          <NextButton
+            onClick={() => {
+              setPage((page) => page + 1);
+            }}
+            type="primary"
+          >
+            다음
           </NextButton>
         </ContentBox>
       </Block>
