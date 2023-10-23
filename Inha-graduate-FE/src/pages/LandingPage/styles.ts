@@ -1,0 +1,31 @@
+import { Button, Layout } from 'antd';
+import styled from 'styled-components';
+
+export const Block = styled(Layout)`
+    background-color: #fff;
+    justify-content: center;
+    .ant-steps .ant-steps-item-icon .ant-steps-icon {
+        top: -1.8px;
+    }
+    gap: 40px;
+`;
+export const ContentBox = styled.div`
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    padding: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+`;
+export const NextButton = styled(Button)`
+    width: 300px;
+    padding: 30px 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
