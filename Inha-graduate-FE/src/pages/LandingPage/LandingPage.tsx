@@ -3,6 +3,8 @@ import {
   StepsComponent,
   SchedulePicker,
   DestinationCards,
+  AccommodationCards,
+  FoodCards,
 } from "../../components";
 import { Block, ContentBox, NextButton } from "./styles";
 import { useState } from "react";
@@ -15,6 +17,8 @@ export default function LandingPage() {
     () => (page === 0 && <DestinationPicker />),
     () => (page === 1 && <SchedulePicker />),
     () => (page === 2 && <DestinationCards />),
+    () => (page === 3 && <AccommodationCards />),
+    () => (page === 4 && <FoodCards />),
     () => (
       <NextButton
         onClick={() => {
