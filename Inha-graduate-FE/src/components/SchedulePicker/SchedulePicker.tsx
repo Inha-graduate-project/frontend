@@ -1,11 +1,12 @@
 import type { Dayjs } from "dayjs";
 import { useState } from "react";
 import { DatePicker } from "antd";
+import { TopMarginText } from "./styles";
+import { NoMarginTitle } from "../DestinationPicker/styles";
 
 const { RangePicker } = DatePicker;
 
 type RangeValue = [Dayjs | null, Dayjs | null] | null;
-import { NoMarginTitle } from "./styles";
 
 export default function SchedulePicker() {
   const [dates, setDates] = useState<RangeValue>(null);
@@ -30,13 +31,9 @@ export default function SchedulePicker() {
 
   return (
     <>
-      <div>
-        <NoMarginTitle>원하는 일정을 선택해 주세요.</NoMarginTitle>
-        <span>최대 3일까지만 선택이 가능합니다.</span>
-      </div>
-
+      <NoMarginTitle>원하는 일정을 선택해 주세요.</NoMarginTitle>
       <RangePicker
-        style={{ padding: "16px" }}
+        style={{ padding: "16px", width: "30vw" }}
         value={dates || value}
         disabledDate={disabledDate}
         onCalendarChange={(val) => {
@@ -48,6 +45,7 @@ export default function SchedulePicker() {
         onOpenChange={onOpenChange}
         changeOnBlur
       />
+      <TopMarginText>최대 3일까지만 선택이 가능합니다.</TopMarginText>
     </>
   );
 }
