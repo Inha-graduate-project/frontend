@@ -19,14 +19,14 @@ export const ContentBox = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 60px;
 `;
 export const NextButton = styled(Button)`
     width: 10vw;
     padding: 30px 0;
     font-size: 20px;
     font-weight: bold;
-    margin: 0 auto;
+    margin: 60px auto;
+    margin-bottom: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
