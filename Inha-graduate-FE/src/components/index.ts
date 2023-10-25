@@ -5,3 +5,4 @@ export * from './DestinationCards';
 export * from './CardComponent';
 export * from './AccommodationCards';
 export * from './FoodCards';
+export * from './TransportationCards';

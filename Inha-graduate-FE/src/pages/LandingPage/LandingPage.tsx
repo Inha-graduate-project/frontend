@@ -5,6 +5,7 @@ import {
   DestinationCards,
   AccommodationCards,
   FoodCards,
+  TransportationCards,
 } from "../../components";
 import { Block, ContentBox, NextButton } from "./styles";
 import { useState } from "react";
@@ -18,8 +19,9 @@ export default function LandingPage() {
     () => page === 0 && <DestinationPicker />,
     () => page === 1 && <SchedulePicker />,
     () => page === 2 && <DestinationCards />,
-    () => page === 3 && <AccommodationCards />,
-    () => page === 4 && <FoodCards />,
+    () => page === 3 && <TransportationCards />,
+    () => page === 4 && <AccommodationCards />,
+    () => page === 5 && <FoodCards />,
     () => (
       <NextButton
         onClick={() => {
