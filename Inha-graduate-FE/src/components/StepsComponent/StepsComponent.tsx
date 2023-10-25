@@ -10,10 +10,10 @@ export default function StepsComponent({ current }: StepsComponentProps) {
         current={current}
         items={[
           {
-            title: "어디로 갈까?",
+            title: "지역 선택",
           },
           {
-            title: "얼마나 있을까?",
+            title: "일정 선택",
           },
           {
             title: "선호 여행 스타일",
