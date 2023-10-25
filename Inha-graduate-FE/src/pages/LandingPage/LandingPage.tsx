@@ -12,17 +12,21 @@ import { useTransition, animated } from "@react-spring/web";
 
 export default function LandingPage() {
   const [page, setPage] = useState(0);
+  const [steps, setSteps] = useState(0);
 
   const items = [
-    () => (page === 0 && <DestinationPicker />),
-    () => (page === 1 && <SchedulePicker />),
-    () => (page === 2 && <DestinationCards />),
-    () => (page === 3 && <AccommodationCards />),
-    () => (page === 4 && <FoodCards />),
+    () => page === 0 && <DestinationPicker />,
+    () => page === 1 && <SchedulePicker />,
+    () => page === 2 && <DestinationCards />,
+    () => page === 3 && <AccommodationCards />,
+    () => page === 4 && <FoodCards />,
     () => (
       <NextButton
         onClick={() => {
           setPage((page) => page + 1);
+          if (steps === 0 || steps === 1) {
+            setSteps((steps) => steps + 1);
+          }
         }}
         type="primary"
       >
@@ -42,12 +46,10 @@ export default function LandingPage() {
 
   return (
     <Block>
-      <StepsComponent />
+      <StepsComponent current={steps} />
       <ContentBox>
         {transition((styles, item) => (
-          <animated.div style={styles}>
-            {item()}
-          </animated.div>
+          <animated.div style={styles}>{item()}</animated.div>
         ))}
       </ContentBox>
     </Block>
