@@ -211,7 +211,7 @@ export default function DestinationPicker() {
       </Block>
       {buttonIdx >= 9 && (
         <>
-          <DownOutlined style={{ marginTop: "30px" }} />
+          <DownOutlined style={{ marginTop: "30px", color: "#ccc" }} />
           <Block style={{ marginTop: "30px" }}>
             {optionalItems[buttonIdx - 9].map((item) => {
               return <StyledButton>{item}</StyledButton>;

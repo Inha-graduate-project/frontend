@@ -5,8 +5,8 @@ export default function DestinationCards() {
   const destination = [
     "산",
     "바다",
-    "역사관광지",
-    "체험관광지",
+    "역사/문화",
+    "체험",
     "건축/조형물",
     "카페",
   ];
