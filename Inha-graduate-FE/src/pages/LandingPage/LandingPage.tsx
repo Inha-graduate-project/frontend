@@ -10,10 +10,12 @@ import {
 import { Block, ContentBox, NextButton } from "./styles";
 import { useState } from "react";
 import { useTransition, animated } from "@react-spring/web";
+import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
   const [page, setPage] = useState(0);
   const [steps, setSteps] = useState(0);
+  const navigate = useNavigate();
 
   const items = [
     () => page === 0 && <DestinationPicker />,
@@ -28,6 +30,9 @@ export default function LandingPage() {
           setPage((page) => page + 1);
           if (steps === 0 || steps === 1) {
             setSteps((steps) => steps + 1);
+          }
+          if (page >= 5) {
+            navigate("/course");
           }
         }}
         type="primary"
