@@ -7,3 +7,4 @@ export * from './AccommodationCards';
 export * from './FoodCards';
 export * from './TransportationCards';
 export * from './CourseSideBar';
+export * from './CourseItems';
